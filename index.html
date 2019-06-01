@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <title>发音工具</title>
 <script type="text/javascript"> 
+   function playAudio(audio){
+	//IE8播放声音
+	if($.browser.msie && $.browser.version=='8.0'){
+		$('#audio-box').html('<embed src="'+audio+'"/>'); 
+	}
+	else{
+		var html = ['<audio autoplay="autoplay"><source src="',audio,'" type="audio/mpeg"/></audio>'].join('');
+		$('#audio-box').html(html); 
+	}
+}
+
    var count=0;
    
    function add(num){
