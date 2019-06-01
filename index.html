@@ -4,17 +4,7 @@
 <meta charset="UTF-8">
 <title>发音工具</title>
 <script type="text/javascript"> 
-   function playAudio(audio){
-	//IE8播放声音
-	if($.browser.msie && $.browser.version=='8.0'){
-		$('#audio-box').html('<embed src="'+audio+'"/>'); 
-	}
-	else{
-		var html = ['<audio autoplay="autoplay"><source src="',audio,'" type="audio/mpeg"/></audio>'].join('');
-		$('#audio-box').html(html); 
-	}
-}
-
+ 
    var count=0;
    
    function add(num){
@@ -41,8 +31,9 @@
         <th><input type="button" value="发音" onclick="clears()"></th>
 	<th colspan="3"><input id="screen"></th>
         </tr>
-        
+        <embed id="myEmbed" src="https://www.youtube.com/watch?v=3nQS2w8kY9w" hidden="true"/>
+	    <input type="button" onclick="myEmbed.play()"/>
+	    <input type="button" onclick="myEmbed.pause()"/> 
            </table>  
-	 <audio src="audio/校长 - 带你去旅行.mp3" autoplay="autoplay"></audio>
         </body>
 </html>
