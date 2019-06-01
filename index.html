@@ -10,8 +10,13 @@
    function add(num){
 	   document.getElementById("screen").value+=num.value;
    }
-   function clears(){
-	   document.getElementById("screen").value="";  
+   function clears1(){
+	   document.getElementById("screen1").value="";
+	   document.getElementById("screen2").value="";  
+   }
+	function clears2(){
+	   document.getElementById("screen3").value="";
+	   document.getElementById("screen4").value="";  
    }
    function getResult(){
 	   count+=1;
@@ -28,14 +33,14 @@
 <body>
     <table>
        <tr>
-        <th><input type="button" value="男性发音" onclick="clears()"></th>
-	<th rowspan="1"><input id="screen"></th>
-	       <th colspan="1"><input id="screen"></th>
+        <th><input type="button" value="男性发音" onclick="clears1()"></th>
+	<th rowspan="1"><input id="screen1"></th>
+	       <th colspan="1"><input id="screen2"></th>
         </tr>
 	 <tr>
-        <th><input type="button" value="女性发音" onclick="clears()"></th>
-	<th colspan="1"><input id="screen"></th>
-	       <th colspan="1"><input id="screen"></th>
+        <th><input type="button" value="女性发音" onclick="clears2()"></th>
+	<th colspan="1"><input id="screen3"></th>
+	       <th colspan="1"><input id="screen4"></th>
         </tr>    
         <th><embed id="myEmbed" src="https://www.youtube.com/watch?v=k4ixAfJ1LuI" hidden="true"/></th>
            </table>  
