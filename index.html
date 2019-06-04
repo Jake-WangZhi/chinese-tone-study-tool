@@ -30,13 +30,23 @@
 		   count=0;
 	   }
    }
+function toggleSound1() {
+            var music = document.getElementById("a");//获取ID  
+                console.log(music);
+                console.log(music.paused);
+            if (music.paused) { //判读是否播放  
+                music.paused=false;
+                music.play(); //没有就播放 
+            }  
+            
+        }
    
 </script>
 </head>
 <body>
     <table>
        <tr>
-        <th><input type="button" value="男性发音" onclick="clears1()"></th>
+        <th><input type="button" value="男性发音" onclick="toggleSound1()"></th>
 	<th rowspan="1"><input id="screen1"></th>
 	       <th colspan="1"><input id="screen2"></th>
         </tr>
