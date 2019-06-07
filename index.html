@@ -8,7 +8,9 @@
    function clears1(){	
 	 if(document.getElementById("screen1").value==1){
 		document.getElementById("a").play(); 
-		 document.getElementById("b").play(); 
+	      if(document.getElementById("a").ended){  
+		 document.getElementById("b").play();
+	      }
 	   }
 	  
 	   document.getElementById("screen1").value="";
