@@ -8,7 +8,8 @@
    function clears1(){	
 	 if(document.getElementById("screen1").value==1){
 		document.getElementById("a").play(); 
-	     
+	      while(document.getElementById("a").ended!=0){  
+	      }
 	      document.getElementById("b").play();
 	   }
 	  
@@ -42,7 +43,7 @@
 	    </tr>
     <table>
       	 <tr>
-        <th><input type="button" value="3男性发音" onclick="clears1()"></th>
+        <th><input type="button" value="4男性发音" onclick="clears1()"></th>
 	<th><input id="screen1"></th>
 	       <th><input id="screen2"></th>
         </tr>  
