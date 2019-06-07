@@ -8,8 +8,7 @@
    function clears1(){	
 	 if(document.getElementById("screen1").value==1){
 	      document.getElementById("a").play(); 
-	       var v=document.getElementById("b").duration;
-		setTimeout(function(){document.getElementById("b").play()}, v*1000); 
+		setTimeout(function(){document.getElementById("b").play()}, document.getElementById("b").duration*1000); 
 	    
 	   }
 	  
@@ -43,7 +42,7 @@
 	    </tr>
     <table>
       	 <tr>
-        <th><input type="button" value="7男性发音" onclick="clears1()"></th>
+        <th><input type="button" value="8男性发音" onclick="clears1()"></th>
 	<th><input id="screen1"></th>
 	       <th><input id="screen2"></th>
         </tr>  
