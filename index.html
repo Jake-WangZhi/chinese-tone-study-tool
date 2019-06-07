@@ -8,9 +8,9 @@
    function clears1(){	
 	 if(document.getElementById("screen1").value==1){
 		document.getElementById("a").play(); 
-	      if(document.getElementById("a").ended){  
-		 document.getElementById("b").play();
+	      while(!document.getElementById("a").ended){  
 	      }
+	      document.getElementById("b").play();
 	   }
 	  
 	   document.getElementById("screen1").value="";
@@ -54,7 +54,7 @@
         </tr>  
            </table> 
 
-<audio id=a src="https://traffic.omny.fm/d/clips/4b5f9d6d-9214-48cb-8455-a73200038129/52f1197d-7b84-44bf-9741-a79400815569/8bcd4a69-79f6-491a-b1a4-aa560143d1b6/audio.mp3" type="audio/mp3" autostart="false">
+<audio id=a src="https://www.mfiles.co.uk/mp3-downloads/invention2part-no13.mp3" autostart="false">
 	</audio>
 <audio id=b src="https://www.mfiles.co.uk/mp3-downloads/Toccata-and-Fugue-Dm.mp3" autostart="false">
 	</audio>	
