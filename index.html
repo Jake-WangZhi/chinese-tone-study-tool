@@ -6,7 +6,12 @@
 <script type="text/javascript"> 
  
    function clears1(){	
-	   document.getElementById("a").play();  
+	 if(document.getElementById("screen1").value==1){
+		document.getElementById("a").play();  
+	   }
+	    if(document.getElementById("screen2").value==2){
+		document.getElementById("b").play();  
+	   }
 	   document.getElementById("screen1").value="";
 	   document.getElementById("screen2").value="";  
    }
@@ -23,16 +28,7 @@
 		   count=0;
 	   }
    }
-function toggleSound1() {
-            var music = document.getElementById("a");//获取ID  
-                console.log(music);
-                console.log(music.paused);
-            if (music.paused) { //判读是否播放  
-                music.paused=false;
-                music.play(); //没有就播放 
-            }  
-             document.getElementById("screen1").value="";
-        }
+
    
 </script>
 </head>
