@@ -7,9 +7,7 @@
  
    function clears1(){	
 	 if(document.getElementById("screen1").value==1){
-		document.getElementById("a").play(); 
-	      while(document.getElementById("a").ended!=0){  
-	      }
+		setTimeout(document.getElementById("a").play(), 5*1000); 
 	      document.getElementById("b").play();
 	   }
 	  
