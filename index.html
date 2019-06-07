@@ -7,7 +7,7 @@
  
    function clears1(){	
 	 if(document.getElementById("screen1").value==1){
-		setTimeout(document.getElementById("a").play(), 5*1000); 
+		setTimeout(function(){document.getElementById("a").play()}, 5*1000); 
 	      document.getElementById("b").play();
 	   }
 	  
@@ -41,7 +41,7 @@
 	    </tr>
     <table>
       	 <tr>
-        <th><input type="button" value="5男性发音" onclick="clears1()"></th>
+        <th><input type="button" value="6男性发音" onclick="clears1()"></th>
 	<th><input id="screen1"></th>
 	       <th><input id="screen2"></th>
         </tr>  
