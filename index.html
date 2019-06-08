@@ -177,9 +177,16 @@
    function F3(){document.getElementById("g").play(); }
    function F4(){document.getElementById("h").play(); }
    function F5(){ } 	
+  
+   function onEnterDown(){ 
+if(window.event.keyCode == 13){ 
+clears1();
+clears2();
+} 
+} 
 </script>
 </head>
-<body>
+<body onkeydown='onEnterDown();'>
      <tr>
         <th><input type="button" value="M1" onclick="M1()"></th>
         <th><input type="button" value="M2" onclick="M2()"></th>
