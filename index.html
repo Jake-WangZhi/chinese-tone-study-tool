@@ -179,11 +179,11 @@
    function F5(){ } 	
   
    function onEnterDown(){ 
-if(window.event.keyCode == 13){ 
-clears1();
-clears2();
-} 
-} 
+      if(window.event.keyCode == 13){ 
+         clears1();
+         clears2();
+        } 
+    }  
 </script>
 </head>
 <body onkeydown='onEnterDown();'>
@@ -191,27 +191,27 @@ clears2();
      <tr>
         <th><input type="button" value="M1" onclick="M1()"></th>
         <th><input type="button" value="M2" onclick="M2()"></th>
-	<th><input type="button" value="M3" onclick="M3()"></th>
+	    <th><input type="button" value="M3" onclick="M3()"></th>
         <th><input type="button" value="M4" onclick="M4()"></th>
-	<th><input type="button" value="M5" onclick="M5()"></th>
-	    </tr>
+	    <th><input type="button" value="M5" onclick="M5()"></th>
+	</tr>
     <tr>
         <th><input type="button" value="F1" onclick="F1()"></th>
         <th><input type="button" value="F2" onclick="F2()"></th>
-	<th><input type="button" value="F3" onclick="F3()"></th>
+	    <th><input type="button" value="F3" onclick="F3()"></th>
         <th><input type="button" value="F4" onclick="F4()"></th>
-	<th><input type="button" value="F5" onclick="F5()"></th>
-	    </tr>	
+	    <th><input type="button" value="F5" onclick="F5()"></th>
+	</tr>	
     <table>
-      	 <tr>
-        <th><input type="button" value="男性发音" onclick="clears1()"  ></th>
-	<th><input id="screen1" required></th>
+      	<tr>
+           <th><input type="submit" value="男性发音" onclick="clears1()" pattern="^[1-4]{4}$" ></th>
+	       <th><input id="screen1"></th>
         </tr>  
-	 <tr>
-        <th><input type="button" value="女性发音" onclick="clears2()" ></th>
-	<th><input id="screen2" required></th>
+	    <tr>
+           <th><input type="submit" value="女性发音" onclick="clears2()" pattern="^[1-4]{4}$"></th>
+	       <th><input id="screen2"></th>
         </tr>  
-           </table> 
+    </table> 
 (The tool is still in beta)
 <audio id=a src="M1.mp3" autostart="false">
 	</audio>
