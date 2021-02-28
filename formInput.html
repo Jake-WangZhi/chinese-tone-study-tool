@@ -1,0 +1,94 @@
+<!DOCTYPE	html>
+<!-- myWidgets -->
+<html>
+    <head>
+      <meta name="viewport" content="initial-scale=1.0 user-scalable=no">
+      <meta charset="utf-8">
+      <title>Form Input</title>    
+           <link rel="stylesheet" type="text/css" href="style.css"/> 
+           <link rel="stylesheet" type="text/css" href="map2.css"/>   
+   </head>
+
+   <body class="bgGrey">
+
+      <div class="naviBar">
+         <a href="myEvents.html">My Events</a>
+         <a class="current" href="formInput.html">Form Input</a>
+         <a  href="myWidgets.html">My Widgets</a>
+     </div>
+
+<div>
+<div id="map" class="center"> </div>
+
+     <form action="http://www-users.cselabs.umn.edu/~liux4189/echo.php" method="post">
+       <table  class="table2">
+            <tbody>
+                    <tr>
+                         <td> <label for="event">Event:</label> </td>
+                        <td><input type="text" id="event" name="event" pattern="^[a-zA-Z0-9\s]{1,}$" title="Event must be alphanumeric" required></td>
+                  </tr>
+                  <tr>
+                        <td><label for="day">Day of Week:</label></td>
+                        <td>   <select id="day" name="day" class=" width">
+                                   <option value="Sun">Sun</option>
+                                   <option value="Mon">Mon</option>
+                                   <option value="Tue">Tue</option>
+                                   <option value="Wed">Wed</option>
+                                   <option value="Thu">Thu</option>
+                                   <option value="Fri">Fri</option>
+                                   <option value="Sat">Sat</option>
+                                   </select></td>
+                  </tr>
+                  <tr>
+                        <td><label for="start">Start:</label></td>
+                        <td><input type="time" id="start" name="start" class=" width" required></td>
+                  </tr>
+                  <tr>
+                        <td><label for="end">End:</label></td>
+                        <td><input type="time" id="end" name="end" class=" width" required></td>
+                  </tr>
+                  <tr>
+                        <td><label for="phone">Phone:</label></td>
+                        <td><input type="tel" id="phone" name="phone" placeholder="123-456-6789" pattern="^[1-9]{3}-[0-9]{3}-[0-9]{4}$" title="Please enter the format 123-456-6789" required></td>
+                  </tr>
+                  <tr>
+                        <td><label for="location">Location:</label></td>
+                        <td><input type="text" id="location" name="location" pattern="^[a-zA-Z0-9,. ]{1,}$" title="Location must be alphanumeric" required></td>
+                  </tr>
+                  <tr>
+                        <td><label for="info">Extra Info:</label></td>
+                        <td><input type="text" id="info" name="info" pattern="^[a-zA-Z0-9,. ]{1,}$" title="Info must be alphanumeric" required></td>
+                  </tr>
+                  <tr>
+                        <td><label for="url">Enter URL for the Extra Info:</label></td>
+                        <td><input type="url" id="url" name="url" required></td>
+                  </tr>
+                  <tr>
+                        <td></td>
+                        <td><input type="submit" class="button"></td>
+                  </tr>
+            </tbody>
+       </table>
+   </form>
+</div>
+
+
+<script>
+      var map;
+      function initMap() {
+		var myLatLng = {lat: 44.977276, lng: -93.232266};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 16
+        });
+          var input = document.getElementById('location');
+          var autocomplete = new google.maps.places.Autocomplete(input);
+      }
+
+ </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5jUS5tW40gwq_umuOrhby2JJZnDVCzus&libraries=places&callback=initMap" async defer></script>
+
+   </body>
+
+</html>
