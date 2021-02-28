@@ -167,36 +167,26 @@
 	   var v =document.getElementById("screen2").value;
 	   for(i=0;i<v.length;i++){
 	 if(v[i]==1){
-	      if(i!=0){
-		  setTimeout(function(){document.getElementById("e").play()}, 3000); 
-		  }else{
-		  document.getElementById("e").play();
-		  }
+
+		  setTimeout(function(){document.getElementById("e").play()}, i*1000); 
+
 	 } 
 	 if(v[i]==2){
-	     if(i!=0){
-		  setTimeout(function(){document.getElementById("f").play()}, 3000)
-		  }else{
-		  document.getElementById("f").play();
-		  }
+
+		  setTimeout(function(){document.getElementById("f").play()}, i*1000)
+
 	 } 
 	 if(v[i]==3){
-	      if(i!=0){
-		  setTimeout(function(){document.getElementById("g").play()}, 3000) 
 
-		  }else{
-		  document.getElementById("g").play();
-		               alert("Hello!");
-		  }
+		  setTimeout(function(){document.getElementById("g").play()}, i*1000) 
+
+
 	 } 
 	  if(v[i]==4){
-	      if(i!=0){
-		  setTimeout(function(){document.getElementById("h").play()}, 3000)
-		  }else{
-		  document.getElementById("h").play();		  
-		    alert("Hello!");
-		  }
-	  } 	   
+
+		  setTimeout(function(){document.getElementById("h").play()}, i*1000)
+		  
+	   
 	 }
 	   document.getElementById("screen2").value="";
    }
