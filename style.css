@@ -1,23 +1,42 @@
 body {
       background-color: lightblue;
      }
-.buttonM {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+
+audio:focus{
+  box-shadow: 0 0 3pt 2pt grey;
+  outline: none;
 }
 
-.buttonF {
-  background-color: #fc8003;
-  border: none;
-  color: white;
+
+
+
+
+
+
+
+.button{
+	transition-duration: 0.5s;
+}
+
+.button:hover{
+	 box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button:focus{
+  box-shadow: 0 0 3pt 2pt red;
+  outline: none;
+}
+
+.buttonM {
+  background-color: white;
+  border: 2px solid #4CAF50;
+  color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -25,4 +44,29 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 12px;
+}
+.buttonM:hover {
+  background-color: #4CAF50;
+  color: white;
+  
+}
+
+
+.buttonF {
+  background-color: white;
+  border: 2px solid #fc8003;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.buttonF:hover {
+  background-color: #fc8003;
+  color: white;
 }
