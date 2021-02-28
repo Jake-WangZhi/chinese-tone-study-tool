@@ -1,94 +1,233 @@
-<!DOCTYPE	html>
-<!-- myWidgets -->
+<!DOCTYPE html>
 <html>
-    <head>
-      <meta name="viewport" content="initial-scale=1.0 user-scalable=no">
-      <meta charset="utf-8">
-      <title>Form Input</title>    
-           <link rel="stylesheet" type="text/css" href="style.css"/> 
-           <link rel="stylesheet" type="text/css" href="map2.css"/>   
-   </head>
-
-   <body class="bgGrey">
-
-      <div class="naviBar">
-         <a href="myEvents.html">My Events</a>
-         <a class="current" href="formInput.html">Form Input</a>
-         <a  href="myWidgets.html">My Widgets</a>
-     </div>
-
-<div>
-<div id="map" class="center"> </div>
-
-     <form action="http://www-users.cselabs.umn.edu/~liux4189/echo.php" method="post">
-       <table  class="table2">
-            <tbody>
-                    <tr>
-                         <td> <label for="event">Event:</label> </td>
-                        <td><input type="text" id="event" name="event" pattern="^[a-zA-Z0-9\s]{1,}$" title="Event must be alphanumeric" required></td>
-                  </tr>
-                  <tr>
-                        <td><label for="day">Day of Week:</label></td>
-                        <td>   <select id="day" name="day" class=" width">
-                                   <option value="Sun">Sun</option>
-                                   <option value="Mon">Mon</option>
-                                   <option value="Tue">Tue</option>
-                                   <option value="Wed">Wed</option>
-                                   <option value="Thu">Thu</option>
-                                   <option value="Fri">Fri</option>
-                                   <option value="Sat">Sat</option>
-                                   </select></td>
-                  </tr>
-                  <tr>
-                        <td><label for="start">Start:</label></td>
-                        <td><input type="time" id="start" name="start" class=" width" required></td>
-                  </tr>
-                  <tr>
-                        <td><label for="end">End:</label></td>
-                        <td><input type="time" id="end" name="end" class=" width" required></td>
-                  </tr>
-                  <tr>
-                        <td><label for="phone">Phone:</label></td>
-                        <td><input type="tel" id="phone" name="phone" placeholder="123-456-6789" pattern="^[1-9]{3}-[0-9]{3}-[0-9]{4}$" title="Please enter the format 123-456-6789" required></td>
-                  </tr>
-                  <tr>
-                        <td><label for="location">Location:</label></td>
-                        <td><input type="text" id="location" name="location" pattern="^[a-zA-Z0-9,. ]{1,}$" title="Location must be alphanumeric" required></td>
-                  </tr>
-                  <tr>
-                        <td><label for="info">Extra Info:</label></td>
-                        <td><input type="text" id="info" name="info" pattern="^[a-zA-Z0-9,. ]{1,}$" title="Info must be alphanumeric" required></td>
-                  </tr>
-                  <tr>
-                        <td><label for="url">Enter URL for the Extra Info:</label></td>
-                        <td><input type="url" id="url" name="url" required></td>
-                  </tr>
-                  <tr>
-                        <td></td>
-                        <td><input type="submit" class="button"></td>
-                  </tr>
-            </tbody>
-       </table>
-   </form>
-</div>
-
-
-<script>
-      var map;
-      function initMap() {
-		var myLatLng = {lat: 44.977276, lng: -93.232266};
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng,
-          zoom: 16
-        });
-          var input = document.getElementById('location');
-          var autocomplete = new google.maps.places.Autocomplete(input);
-      }
-
- </script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5jUS5tW40gwq_umuOrhby2JJZnDVCzus&libraries=places&callback=initMap" async defer></script>
-
-   </body>
-
+<head>
+<meta charset="UTF-8">
+<title>发音工具</title>
+<script type="text/javascript"> 
+ 
+   function clears1(){	
+	 
+	 if(document.getElementById("screen1").value==1){
+		  document.getElementById("a").play();  
+	 } 
+	 if(document.getElementById("screen1").value==2){
+		  document.getElementById("b").play();  
+	 } 
+	 if(document.getElementById("screen1").value==3){
+		  document.getElementById("c").play();  
+	 } 
+	 if(document.getElementById("screen1").value==4){
+		  document.getElementById("d").play();  
+	 } 
+	 if(document.getElementById("screen1").value==11){
+	      document.getElementById("a").play(); 
+		setTimeout(function(){document.getElementById("a").play()}, document.getElementById("a").duration*1100); 	    
+	   }
+	  if(document.getElementById("screen1").value==12){
+	      document.getElementById("a").play(); 
+		setTimeout(function(){document.getElementById("b").play()}, document.getElementById("a").duration*1000); 	    
+	   }
+	  if(document.getElementById("screen1").value==13){
+	      document.getElementById("a").play(); 
+		setTimeout(function(){document.getElementById("c").play()}, document.getElementById("a").duration*1000); 	    
+	   } 
+	  if(document.getElementById("screen1").value==14){
+	      document.getElementById("a").play(); 
+		setTimeout(function(){document.getElementById("d").play()}, document.getElementById("a").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen1").value==21){
+	      document.getElementById("b").play(); 
+		setTimeout(function(){document.getElementById("a").play()}, document.getElementById("b").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen1").value==22){
+	      document.getElementById("b").play(); 
+		setTimeout(function(){document.getElementById("b").play()}, document.getElementById("b").duration*1100); 	    
+	   } 
+	   if(document.getElementById("screen1").value==23){
+	      document.getElementById("b").play(); 
+		setTimeout(function(){document.getElementById("c").play()}, document.getElementById("b").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen1").value==24){
+	      document.getElementById("b").play(); 
+		setTimeout(function(){document.getElementById("d").play()}, document.getElementById("b").duration*1000); 	    
+	   } 
+	      if(document.getElementById("screen1").value==31){
+	      document.getElementById("c").play(); 
+		setTimeout(function(){document.getElementById("a").play()}, document.getElementById("c").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen1").value==32){
+	      document.getElementById("c").play(); 
+		setTimeout(function(){document.getElementById("b").play()}, document.getElementById("c").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen1").value==33){
+	      document.getElementById("b").play(); 
+		setTimeout(function(){document.getElementById("c").play()}, document.getElementById("c").duration*1100); 	    
+	   } 
+	   if(document.getElementById("screen1").value==34){
+	      document.getElementById("c").play(); 
+		setTimeout(function(){document.getElementById("d").play()}, document.getElementById("c").duration*1000); 	    
+	   } 
+	      if(document.getElementById("screen1").value==41){
+	      document.getElementById("d").play(); 
+		setTimeout(function(){document.getElementById("a").play()}, document.getElementById("d").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen1").value==42){
+	      document.getElementById("d").play(); 
+		setTimeout(function(){document.getElementById("b").play()}, document.getElementById("d").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen1").value==43){
+	      document.getElementById("d").play(); 
+		setTimeout(function(){document.getElementById("c").play()}, document.getElementById("d").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen1").value==44){
+	      document.getElementById("d").play(); 
+		setTimeout(function(){document.getElementById("d").play()}, document.getElementById("d").duration*1500); 	    
+	   } 
+	   document.getElementById("screen1").value="";  
+   }
+	
+   function clears2(){
+	   if(document.getElementById("screen2").value==1){
+		  document.getElementById("e").play();  
+	 } 
+	 if(document.getElementById("screen2").value==2){
+		  document.getElementById("f").play();  
+	 } 
+	 if(document.getElementById("screen2").value==3){
+		  document.getElementById("g").play();  
+	 } 
+	 if(document.getElementById("screen2").value==4){
+		  document.getElementById("h").play();  
+	 } 
+	 if(document.getElementById("screen2").value==11){
+	      document.getElementById("e").play(); 
+		setTimeout(function(){document.getElementById("e").play()}, document.getElementById("e").duration*1100); 	    
+	   }
+	  if(document.getElementById("screen2").value==12){
+	      document.getElementById("e").play(); 
+		setTimeout(function(){document.getElementById("f").play()}, document.getElementById("e").duration*1000); 	    
+	   }
+	  if(document.getElementById("screen2").value==13){
+	      document.getElementById("e").play(); 
+		setTimeout(function(){document.getElementById("g").play()}, document.getElementById("e").duration*1000); 	    
+	   } 
+	  if(document.getElementById("screen2").value==14){
+	      document.getElementById("e").play(); 
+		setTimeout(function(){document.getElementById("h").play()}, document.getElementById("e").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen2").value==21){
+	      document.getElementById("f").play(); 
+		setTimeout(function(){document.getElementById("e").play()}, document.getElementById("f").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen2").value==22){
+	      document.getElementById("f").play(); 
+		setTimeout(function(){document.getElementById("f").play()}, document.getElementById("f").duration*1100); 	    
+	   } 
+	   if(document.getElementById("screen2").value==23){
+	      document.getElementById("f").play(); 
+		setTimeout(function(){document.getElementById("g").play()}, document.getElementById("f").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen2").value==24){
+	      document.getElementById("f").play(); 
+		setTimeout(function(){document.getElementById("h").play()}, document.getElementById("f").duration*1000); 	    
+	   } 
+	      if(document.getElementById("screen2").value==31){
+	      document.getElementById("g").play(); 
+		setTimeout(function(){document.getElementById("e").play()}, document.getElementById("g").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen2").value==32){
+	      document.getElementById("g").play(); 
+		setTimeout(function(){document.getElementById("f").play()}, document.getElementById("g").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen2").value==33){
+	      document.getElementById("f").play(); 
+		setTimeout(function(){document.getElementById("g").play()}, document.getElementById("g").duration*1100); 	    
+	   } 
+	   if(document.getElementById("screen2").value==34){
+	      document.getElementById("g").play(); 
+		setTimeout(function(){document.getElementById("h").play()}, document.getElementById("g").duration*1000); 	    
+	   } 
+	      if(document.getElementById("screen2").value==41){
+	      document.getElementById("h").play(); 
+		setTimeout(function(){document.getElementById("e").play()}, document.getElementById("h").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen2").value==42){
+	      document.getElementById("h").play(); 
+		setTimeout(function(){document.getElementById("f").play()}, document.getElementById("h").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen2").value==43){
+	      document.getElementById("h").play(); 
+		setTimeout(function(){document.getElementById("g").play()}, document.getElementById("h").duration*1000); 	    
+	   } 
+	   if(document.getElementById("screen2").value==44){
+	      document.getElementById("h").play(); 
+		setTimeout(function(){document.getElementById("h").play()}, document.getElementById("h").duration*1000); 	    
+	   } 
+	   document.getElementById("screen2").value="";
+   }
+   
+   function M1(){document.getElementById("a").play(); }
+   function M2(){document.getElementById("b").play(); }
+   function M3(){document.getElementById("c").play(); }
+   function M4(){document.getElementById("d").play(); }
+   function M5(){ }
+	
+   function F1(){document.getElementById("e").play(); }
+   function F2(){document.getElementById("f").play(); }
+   function F3(){document.getElementById("g").play(); }
+   function F4(){document.getElementById("h").play(); }
+   function F5(){ } 	
+  
+   function onEnterDown(){ 
+      if(window.event.keyCode == 13){ 
+         clears1();
+         clears2();
+        } 
+    }  
+</script>
+</head>
+<body onkeydown='onEnterDown();'>
+(M=Male, F=Female)<br/>
+     <tr>
+        <th><input type="button" value="M1" onclick="M1()"></th>
+        <th><input type="button" value="M2" onclick="M2()"></th>
+	    <th><input type="button" value="M3" onclick="M3()"></th>
+        <th><input type="button" value="M4" onclick="M4()"></th>
+	    <th><input type="button" value="M5" onclick="M5()"></th>
+	</tr>
+    <tr>
+        <th><input type="button" value="F1" onclick="F1()"></th>
+        <th><input type="button" value="F2" onclick="F2()"></th>
+	    <th><input type="button" value="F3" onclick="F3()"></th>
+        <th><input type="button" value="F4" onclick="F4()"></th>
+	    <th><input type="button" value="F5" onclick="F5()"></th>
+	</tr>	
+    <table>
+      	<tr>
+           <th><input type="submit" value="男性发音" onclick="clears1()"  ></th>
+	       <th><input id="screen1" pattern="^[1-4]{4}$"></th>
+        </tr>  
+	    <tr>
+           <th><input type="submit" value="女性发音" onclick="clears2()"></th>
+	       <th><input id="screen2" pattern="^[1-4]{4}$"></th>
+        </tr>  
+    </table> 
+(The tool is still in beta)
+<audio id=a src="M1.mp3" autostart="false">
+	</audio>
+<audio id=b src="M2.mp3" autostart="false">
+	</audio>	
+<audio id=c src="M3.mp3" autostart="false">
+	</audio>
+<audio id=d src="M4.mp3" autostart="false">
+	</audio>
+<audio id=e src="F1.mp3" autostart="false">
+	</audio>
+<audio id=f src="F2.mp3" autostart="false">
+	</audio>	
+<audio id=g src="F3.mp3" autostart="false">
+	</audio>
+<audio id=h src="F4.mp3" autostart="false">
+	</audio>	
+        </body>
 </html>
