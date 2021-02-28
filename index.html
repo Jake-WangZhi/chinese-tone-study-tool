@@ -32,7 +32,7 @@
 	   var counter2;
 	   var temp;
 	   temp=0;
-	   counter2=1;
+	   counter2=0;
 	   for(i=0;i<v.length;i++){
 	 if(v[i]==1){
 		  setTimeout(function(){document.getElementById("e").play()}, i*1000); 
@@ -41,7 +41,7 @@
 		  setTimeout(function(){document.getElementById("f").play()}, i*1000);
 	 } 
 	 if(v[i]==3){
-          if(i>temp){
+          if(i+1>temp){
 		  temp = i;
 		  counter2=0;
 		  while(v[temp]==3){
