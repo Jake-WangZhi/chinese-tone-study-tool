@@ -12,7 +12,7 @@
 	   var temp1;
 	   temp1=0;
 	   counter1=0;
-	   for(j=0;j<v.length;j++){
+	   for(j=0;j<u.length;j++){
 	 if(u[j]==1){
 		  setTimeout(function(){document.getElementById("a").play()}, j*1000); 
 	 } 
@@ -23,7 +23,7 @@
           if(j+1>temp1){
 		  temp1 = j;
 		  counter1=0;
-		  while(v[temp1]==3){
+		  while(u[temp1]==3){
 		   counter1++;
 		   temp1++;
 		  }
