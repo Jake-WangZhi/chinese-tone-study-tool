@@ -17,36 +17,35 @@
 	   var temp1 = 0;
 
 	   for(j=0;j<u.length;j++){
-	 if(u[j]==1){
-		  setTimeout(function(){document.getElementById("a").play()}, j*1000); 
-	 } 
-	 if(u[j]==2){
-		  setTimeout(function(){document.getElementById("b").play()}, j*1000);
-	 } 
-	 if(u[j]==3){
-          if(j+1>temp1){
-		  temp1 = j;
-		  counter1=0;
-		  while(u[temp1]==3){
-		   counter1++;
-		   temp1++;
-		  }
-		  }
-		  if(counter1%2==1){
-		  setTimeout(function(){document.getElementById("c").play()}, j*1000);
-		  counter1--;
-		  }else{
-		  setTimeout(function(){document.getElementById("b").play()}, j*1000);
-		  		  counter1--;
-		  }
-	 } 
-
-	  if(u[j]==4){
-		  setTimeout(function(){document.getElementById("d").play()}, j*1000);
-	  } 
-	 }
+	       if(u[j]==1){
+		      setTimeout(function(){document.getElementById("a").play()}, j*1000); 
+	        } 
+	       if(u[j]==2){
+		      setTimeout(function(){document.getElementById("b").play()}, j*1000);
+	        } 
+	       if(u[j]==3){
+               if(j+1>temp1){
+		           temp1 = j;
+		           counter1=0;
+				   while(u[temp1]==3){
+		               counter1++;
+		               temp1++;
+		            }
+		        }
+		       if(counter1%2==1){
+		           setTimeout(function(){document.getElementById("c").play()}, j*1000);
+		           counter1--;
+		        }else{
+		           setTimeout(function(){document.getElementById("b").play()}, j*1000);
+		  		   counter1--;
+		        }
+	        } 
+           if(u[j]==4){
+		      setTimeout(function(){document.getElementById("d").play()}, j*1000);
+	        }    
+	    }
 	   document.getElementById("screen1").value="";  
-   }
+    }
 	
    function clears2(){
 	   var i;
@@ -101,8 +100,12 @@
 </script>
 </head>
 <body>
-(M=Male, F=Female)<br/>
-   <table1>
+   <div>
+     (M=Male, F=Female)<br/>
+   </div>
+   
+   <div>
+   <table>
      <tr>
         <th><input type="button" value="M1" onclick="M1()" class="buttonM button"></th>
         <th><input type="button" value="M2" onclick="M2()" class="buttonM button"></th>
@@ -117,8 +120,11 @@
         <th><input type="button" value="F4" onclick="F4()" class="buttonF button"></th>
 	    <!-- <th><input type="button" value="F5" onclick="F5()"></th> -->
 	</tr>
-   </table1>	
-    <table>
+   </table>
+   </div>
+   
+   <div>   
+      <table>
       	<tr>
            <th><input type="submit" value="男性发音" onclick="clears1()"  ></th>
 	       <th><input id="screen1"></th>
@@ -127,15 +133,23 @@
            <th><input type="submit" value="女性发音" onclick="clears2()"></th>
 	       <th><input id="screen2"></th>
         </tr>  
-    </table> 
-
-  <p>(The tool is still in beta)</p>
-  	<audio controls controlsList="nodownload">
+      </table> 
+    </div>
+	
+	<div>
+      <p>(The tool is still in beta)</p>
+	</div> 
+	
+	<div>
+  	   <audio controls controlsList="nodownload">
 	      <source src="Family.mp3" type="audio/mp3">
-    </audio>
-<div>
-<p id="display"></p>
-</div>
+       </audio>
+	</div>
+	
+    <div>
+      <p id="display"></p>
+    </div>
+	
 <audio id=a src="M1.mp3" autostart="false">
 	</audio>
 <audio id=b src="M2.mp3" autostart="false">
