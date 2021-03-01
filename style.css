@@ -7,6 +7,10 @@ audio:focus{
   outline: none;
 }
 
+.display{
+	
+	font-size: 200%;
+}
 
 .button{
 	transition-duration: 0.5s;
