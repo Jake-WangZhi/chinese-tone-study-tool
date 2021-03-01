@@ -51,9 +51,14 @@
 	   var i;
 	   var v =document.getElementById("screen2").value;
 	   document.getElementById("display").innerHTML = v;
+	   var colorChange=document.getElementById("display").innerHTML;
 	   var counter2 = 0;
 	   var temp2 = 0;
 	   for(i=0;i<v.length;i++){
+	      if(i==3){
+		  colorChange.style.color='red';
+		  }
+	   
 	      if(v[i]==1){
 		     setTimeout(function(){document.getElementById("e").play()}, i*1000); 
 	        } 
@@ -147,7 +152,7 @@
 	</div>
 	
     <div>
-      <p id="display" class="display"></p>
+      <p id="display" class="display center"></p>
     </div>
 	
 <audio id=a src="M1.mp3" autostart="false">

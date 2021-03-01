@@ -11,6 +11,13 @@ audio:focus{
 	font-size: 200%;
 }
 
+.center{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .button{
 	transition-duration: 0.5s;
 }
