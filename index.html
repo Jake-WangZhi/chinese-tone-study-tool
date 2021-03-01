@@ -7,12 +7,15 @@
 <script type="text/javascript"> 
  
    function clears1(){	
+       
 	   var j;
 	   var u =document.getElementById("screen1").value;
-	   var counter1;
-	   var temp1;
-	   temp1=0;
-	   counter1=0;
+	   
+	   document.getElementById("display").innerHTML = u;
+	   
+	   var counter1 = 0;
+	   var temp1 = 0;
+
 	   for(j=0;j<u.length;j++){
 	 if(u[j]==1){
 		  setTimeout(function(){document.getElementById("a").play()}, j*1000); 
@@ -48,41 +51,40 @@
    function clears2(){
 	   var i;
 	   var v =document.getElementById("screen2").value;
-	   var counter2;
-	   var temp2;
-	   temp2=0;
-	   counter2=0;
+	   document.getElementById("display").innerHTML = v;
+	   var counter2 = 0;
+	   var temp2 = 0;
 	   for(i=0;i<v.length;i++){
-	 if(v[i]==1){
-		  setTimeout(function(){document.getElementById("e").play()}, i*1000); 
-	 } 
-	 if(v[i]==2){
-		  setTimeout(function(){document.getElementById("f").play()}, i*1000);
-	 } 
-	 if(v[i]==3){
-          if(i+1>temp2){
-		  temp2 = i;
-		  counter2=0;
-		  while(v[temp2]==3){
-		   counter2++;
-		   temp2++;
-		  }
-		  }
-		  if(counter2%2==1){
-		  setTimeout(function(){document.getElementById("g").play()}, i*1000);
-		  counter2--;
-		  }else{
-		  setTimeout(function(){document.getElementById("f").play()}, i*1000);
+	      if(v[i]==1){
+		     setTimeout(function(){document.getElementById("e").play()}, i*1000); 
+	        } 
+	      if(v[i]==2){
+		     setTimeout(function(){document.getElementById("f").play()}, i*1000);
+	        } 
+		  if(v[i]==3){
+             if(i+1>temp2){
+		          temp2 = i;
+		          counter2=0;
+		          while(v[temp2]==3){
+		              counter2++;
+				      temp2++;
+		            }
+		        }
+		     if(counter2%2==1){
+		         setTimeout(function(){document.getElementById("g").play()}, i*1000);
+		         counter2--;
+		        }else{
+		          setTimeout(function(){document.getElementById("f").play()}, i*1000);
 		  		  counter2--;
-		  }
-	 } 
+		        }
+	        } 
 
-	  if(v[i]==4){
-		  setTimeout(function(){document.getElementById("h").play()}, i*1000);
-	  } 
-	 }
+	      if(v[i]==4){
+		      setTimeout(function(){document.getElementById("h").play()}, i*1000);
+	        }   
+	    }
 	   document.getElementById("screen2").value="";
-   }
+    }
    
    function M1(){document.getElementById("a").play(); }
    function M2(){document.getElementById("b").play(); }
@@ -131,6 +133,9 @@
   	<audio controls controlsList="nodownload">
 	      <source src="Family.mp3" type="audio/mp3">
     </audio>
+<div>
+<p id="display"></p>
+</div>
 <audio id=a src="M1.mp3" autostart="false">
 	</audio>
 <audio id=b src="M2.mp3" autostart="false">
