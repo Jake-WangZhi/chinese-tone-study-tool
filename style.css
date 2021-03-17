@@ -61,7 +61,10 @@ audio:focus{
   color: white;
   
 }
-
+.buttonM:focus{
+  box-shadow: 0 0 3pt 2pt #4CAF50;
+  outline: none;
+}
 
 .buttonF {
   background-color: white;
@@ -79,4 +82,99 @@ audio:focus{
 .buttonF:hover {
   background-color: #fc8003;
   color: white;
+}
+
+.buttonF:focus{
+  box-shadow: 0 0 3pt 2pt #fc8003;
+  outline: none;
+}
+
+
+
+.buttonC {
+  background-color: white;
+  border: 2px solid #0362fc;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.buttonC:hover {
+  background-color: #0362fc;
+  color: white;
+  
+}
+
+.buttonC:focus{
+  box-shadow: 0 0 3pt 2pt #0362fc;
+  outline: none;
+}
+
+
+
+.buttonMale {
+  background-color: white;
+  border: 2px solid Black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 125px;
+}
+
+.buttonMale:hover {
+  background-color: Black;
+  color: white;
+}
+
+.buttonMale:focus{
+  box-shadow: 0 0 3pt 2pt Black;
+  outline: none;
+}
+
+
+
+
+.buttonFemale {
+  background-color: white;
+  border: 2px solid #9b42f5;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: 125px;
+}
+.buttonFemale:hover {
+  background-color: #9b42f5;
+  color: white;
+  
+}
+
+.buttonFemale:focus{
+  box-shadow: 0 0 3pt 2pt #9b42f5;
+  outline: none;
+}
+
+.inputM{
+	
+}
+
+.inputF{
+	
+	
 }

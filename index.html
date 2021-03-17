@@ -5,13 +5,9 @@
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <title>发音工具</title>
 <script type="text/javascript"> 
-   function clear(){
-     	   document.getElementById("screen1").value="";  
-    	   document.getElementById("screen2").value="";
-   }
- 
- 
-   function clears1(){	
+
+
+   function male(){	
        
 	   var j;
 	   var u =document.getElementById("screen1").value;
@@ -52,10 +48,10 @@
 
     }
 	
-   function clears2(){
+   function female(){
 	   var i;
 	   var v =document.getElementById("screen2").value;
-	   <!-- document.getElementById("display").innerHTML = v; -->
+	    document.getElementById("display").innerHTML = v;
 	   var counter2 = 0;
 	   var temp2 = 0;
 	   
@@ -94,6 +90,9 @@
 
     }
    
+      function clearInput(){           document.getElementById("screen1").value="";
+    	   document.getElementById("screen2").value="";}
+   
    function M1(){document.getElementById("a").play(); }
    function M2(){document.getElementById("b").play(); }
    function M3(){document.getElementById("c").play(); }
@@ -105,7 +104,7 @@
    function F3(){document.getElementById("g").play(); }
    function F4(){document.getElementById("h").play(); }
    function F5(){ } 	
-    
+
 </script>
 </head>
 <body>
@@ -135,19 +134,19 @@
    <div>   
       <table>
       	<tr>
-           <th><input type="submit" value="Male" onclick="clears1()"  ></th>
-	       <th><input id="screen1"></th>
+           <th><input type="submit" value="Male" onclick="male()"  class="buttonMale button" ></th>
+	       <th><input id="screen1" class="buttonMale button"></th>
         </tr>  
 	    <tr>
-           <th><input type="submit" value="Female" onclick="clears2()"></th>
-	       <th><input id="screen2"></th>
+           <th><input type="submit" value="Female" onclick="female()" class="buttonFemale button"></th>
+	       <th><input id="screen2" class="buttonFemale button"></th>
         </tr>
-        <tr>
-		    <th><input type="button" value="Clear" onclick="clear()"></th>
-        </tr> 		 
+	 
       </table> 
     </div>
-	
+
+<input type="button" value="Clear" onclick="clearInput()" class="buttonC button">
+
 	
 	
 	
