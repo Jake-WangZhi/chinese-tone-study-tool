@@ -5,6 +5,11 @@
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <title>发音工具</title>
 <script type="text/javascript"> 
+   function clear(){
+     	   document.getElementById("screen1").value="";  
+    	   document.getElementById("screen2").value="";
+   }
+ 
  
    function clears1(){	
        
@@ -44,7 +49,7 @@
 		      setTimeout(function(){document.getElementById("d").play()}, j*1000);
 	        }    
 	    }
-	   document.getElementById("screen1").value="";  
+
     }
 	
    function clears2(){
@@ -88,7 +93,7 @@
 			setTimeout(function(){document.getElementById("display").innerHTML=v[i]}, i*1000);
 
 	    }
-	   document.getElementById("screen2").value="";
+
     }
    
    function M1(){document.getElementById("a").play(); }
@@ -138,9 +143,16 @@
 	    <tr>
            <th><input type="submit" value="Female" onclick="clears2()"></th>
 	       <th><input id="screen2"></th>
-        </tr>  
+        </tr>
+        <tr>
+		    <th><input type="button" value="Clear" onclick="clear()"></th>
+        </tr> 		 
       </table> 
     </div>
+	
+	
+	
+	
 	
 	<div>
       <p>(The tool is still in beta)</p>
