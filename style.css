@@ -18,6 +18,12 @@ audio:focus{
 	transform: translate(-50%, -50%);
 }
 
+.color{
+	color:red;
+}
+
+
+
 .button{
 	transition-duration: 0.5s;
 }
