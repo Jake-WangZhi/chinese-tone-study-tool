@@ -90,8 +90,11 @@
 
     }
    
-      function clearInput(){           document.getElementById("screen1").value="";
-    	   document.getElementById("screen2").value="";}
+      function clearInput(){           
+	       document.getElementById("screen1").value="";
+    	   document.getElementById("screen2").value="";
+		   document.getElementById("display").innerHTML="";
+		   }
    
    function M1(){document.getElementById("a").play(); }
    function M2(){document.getElementById("b").play(); }
