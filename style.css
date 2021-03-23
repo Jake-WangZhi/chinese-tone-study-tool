@@ -129,7 +129,7 @@ audio:focus{
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
-  width: 125px;
+  width: 160px;
 }
 
 .buttonMale:hover {
@@ -157,7 +157,7 @@ audio:focus{
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
-  width: 125px;
+  width: 160px;
 }
 .buttonFemale:hover {
   background-color: #9b42f5;
