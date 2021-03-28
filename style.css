@@ -9,6 +9,9 @@ audio:focus{
 
 .display{
 	font-size: 200%;
+	position: fixed;
+	top: 82%;
+	left: 30%;
 }
 
 .center{
@@ -182,7 +185,7 @@ audio:focus{
 
 .explanation{
 	position: fixed;
-	top: 60%;
+	top: 58%;
 	left: 71%;
 
 }
