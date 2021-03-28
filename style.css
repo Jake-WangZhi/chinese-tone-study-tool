@@ -1,5 +1,5 @@
 body {
-      background-color: lightblue;
+      background-color: white;
      }
 
 audio:focus{
@@ -33,7 +33,7 @@ audio:focus{
 }
 
 .button:active {
-  background-color: #3e8e41;
+  /* background-color: #3e8e41; */
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -47,7 +47,7 @@ audio:focus{
   background-color: white;
   border: 2px solid #4CAF50;
   color: black;
-  padding: 15px 32px;
+  padding: 3px 3px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -56,11 +56,11 @@ audio:focus{
   cursor: pointer;
   border-radius: 12px;
 }
-.buttonM:hover {
-  background-color: #4CAF50;
-  color: white;
+/* .buttonM:hover { */
+  /* background-color: #4CAF50; */
+  /* color: white; */
   
-}
+/* } */
 .buttonM:focus{
   box-shadow: 0 0 3pt 2pt #4CAF50;
   outline: none;
@@ -70,7 +70,7 @@ audio:focus{
   background-color: white;
   border: 2px solid #fc8003;
   color: black;
-  padding: 15px 32px;
+  padding: 3px 3px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -79,10 +79,10 @@ audio:focus{
   cursor: pointer;
   border-radius: 12px;
 }
-.buttonF:hover {
-  background-color: #fc8003;
-  color: white;
-}
+/* .buttonF:hover { */
+  /* background-color: #fc8003; */
+  /* color: white; */
+/* } */
 
 .buttonF:focus{
   box-shadow: 0 0 3pt 2pt #fc8003;

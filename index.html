@@ -110,30 +110,48 @@
 
 </script>
 </head>
-<body>
+<body  class="center">
    <div>
-     (M=Male Voice, F=Female Voice)<br/>
+   <img src='pic.png' width="700" height="250">
    </div>
-   
+
+
+
    <div>
    <table>
      <tr>
-        <th><input type="button" value="Mˉ" onclick="M1()" class="buttonM button"></th>
-        <th><input type="button" value="Mˊ" onclick="M2()" class="buttonM button"></th>
-	    <th><input type="button" value="Mˇ" onclick="M3()" class="buttonM button"></th>
-        <th><input type="button" value="Mˋ" onclick="M4()" class="buttonM button"></th>
+	    <th>Male Voice</th>
+		<th><button type="button" class="buttonM button"><span><img src='1T.png' width="100" height="50" onclick="M1()"></span></button></th>
+		<th><button type="button" class="buttonM button"><span><img src='2T.png' width="100" height="50" onclick="M2()"></span></button></th>
+		<th><button type="button" class="buttonM button"><span><img src='3T.png' width="100" height="50" onclick="M3()"></span></button></th>
+		<th><button type="button" class="buttonM button"><span><img src='4T.png' width="100" height="50" onclick="M4()"></span></button></th>	
+        <!-- <th><input type="button" value="Mˉ" onclick="M2()" class="buttonM button"></th>        -->
+        <!-- <th><input type="button" value="Mˊ" onclick="M2()" class="buttonM button"></th> -->
+	    <!-- <th><input type="button" value="Mˇ" onclick="M3()" class="buttonM button"></th> -->
+        <!-- <th><input type="button" value="Mˋ" onclick="M4()" class="buttonM button"></th> -->
 	    <!-- <th><input type="button" value="M5" onclick="M5()"></th> -->
 	</tr>
     <tr>
-        <th><input type="button" value="Fˉ" onclick="F1()" class="buttonF button"></th>
-        <th><input type="button" value="Fˊ" onclick="F2()" class="buttonF button"></th>
-	    <th><input type="button" value="Fˇ" onclick="F3()" class="buttonF button"></th>
-        <th><input type="button" value="Fˋ" onclick="F4()" class="buttonF button"></th>
+		<th>Female Voice</th>
+		<th><button type="button" class="buttonF button"><span><img src='1T.png' width="100" height="50" onclick="F1()"></span></button></th>
+		<th><button type="button" class="buttonF button"><span><img src='2T.png' width="100" height="50" onclick="F2()"></span></button></th>
+		<th><button type="button" class="buttonF button"><span><img src='3T.png' width="100" height="50" onclick="F3()"></span></button></th>
+		<th><button type="button" class="buttonF button"><span><img src='4T.png' width="100" height="50" onclick="F4()"></span></button></th>	
+        <!-- <th><input type="button" value="Fˉ" onclick="F1()" class="buttonF button"></th> -->
+        <!-- <th><input type="button" value="Fˊ" onclick="F2()" class="buttonF button"></th> -->
+	    <!-- <th><input type="button" value="Fˇ" onclick="F3()" class="buttonF button"></th> -->
+        <!-- <th><input type="button" value="Fˋ" onclick="F4()" class="buttonF button"></th> -->
 	    <!-- <th><input type="button" value="F5" onclick="F5()"></th> -->
 	</tr>
    </table>
    </div>
    
+   <div>
+      <p>
+      <strong>Instructions:</strong></br>
+	  Type numbers 1 to 4 for the corresponding tones
+	  </p>
+   </div>
    <div>   
       <table>
       	<tr>
@@ -151,7 +169,9 @@
     </div>
 
 
-
+   <div>
+   <img src='explanation.jpg' width="300" height="200">
+   </div>
 	
 	
 	
@@ -167,7 +187,7 @@
 	</div> -->
 	
     <div>
-      <p id="display" class="display center"></p>
+      <p id="display" class="display"></p>
     </div>
 	
 <audio id=a src="M1.mp3" autostart="false">
