@@ -130,6 +130,7 @@ audio:focus{
   cursor: pointer;
   border-radius: 12px;
   width: 160px;
+  
 }
 
 .buttonMale:hover {
@@ -177,4 +178,11 @@ audio:focus{
 .inputF{
 	
 	
+}
+
+.explanation{
+	position: fixed;
+	top: 60%;
+	left: 60%;
+
 }
